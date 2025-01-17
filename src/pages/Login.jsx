@@ -19,7 +19,6 @@ const Login = () => {
         } else {
           setIsLoggedIn(true);
           setLoginStatus(response.data[0].username);
-          window.location.reload();
         }
         setUsername("");
         setPassword("");
