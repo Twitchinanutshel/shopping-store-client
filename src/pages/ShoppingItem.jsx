@@ -27,6 +27,10 @@ const ShoppingItem = () => {
     .then(response => {
       console.log(response.data.message);
     })
+    toast.success("Item added to cart!", {
+      position: toast.POSITION.TOP_CENTER,
+      autoClose: 3000,
+    })
     .catch(error => {
       console.log("Error adding to cart:", error);
     });
