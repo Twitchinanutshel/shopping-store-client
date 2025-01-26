@@ -28,13 +28,27 @@ const ShoppingItem = () => {
     })
     .then(response => {
       console.log(response.data.message);
-    })
-    toast.success("Item added to cart!", {
-      position: toast.POSITION.TOP_CENTER,
-      autoClose: 3000,
+      toast.success("Item added to cart!", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        theme: "light",
+      });
     })
     .catch(error => {
       console.log("Error adding to cart:", error);
+      toast.error("Item added to cart!", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        theme: "light",
+      });
     });
   };
 
